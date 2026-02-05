@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Linkedin, Instagram, MessageCircle } from "lucide-react";
-import logo from "../assets/images/pathkannectlogo.png";
+import logo from "../assets/images/pathkannect_logos.png";
 import "../assets/css/Footer.css";
 
 const Footer = () => {
