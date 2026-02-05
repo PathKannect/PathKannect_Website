@@ -1,0 +1,156 @@
+
+:root {
+  --wc-navy: #0f172a;
+  --wc-slate: #64748b;
+  --wc-indigo: #6366f1;
+  --wc-purple: #a855f7;
+  --wc-bg: #f8fafc; /* Subtle off-white to make cards pop */
+  --wc-ease: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.wc-wrapper {
+  padding: 100px 24px;
+  background-color: var(--wc-bg);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: var(--wc-navy);
+  overflow: hidden;
+}
+
+.wc-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* --- Animations --- */
+.reveal-mask {
+  overflow: hidden;
+  display: block;
+}
+
+.reveal-item {
+  display: block;
+  transform: translateY(110%);
+  opacity: 0;
+  animation: revealUp 0.8s var(--wc-ease) forwards;
+}
+
+@keyframes revealUp {
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* --- Header Styling --- */
+.wc-header {
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.wc-title {
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  color: var(--wc-navy);
+}
+
+.wc-subtitle {
+  font-size: 1.15rem;
+  line-height: 1.6;
+  color: var(--wc-slate);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* --- Grid System --- */
+.wc-grid {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 640px) {
+  .wc-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+}
+
+@media (min-width: 1024px) {
+  .wc-grid { grid-template-columns: repeat(4, 1fr); gap: 24px; }
+}
+
+/* --- Card Design --- */
+.wc-card {
+  background-color: #ffffff;
+  padding: 40px 32px;
+  border-radius: 28px;
+  border: 1px solid #f1f5f9;
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 0.8s var(--wc-ease) forwards;
+  transition: transform 0.3s var(--wc-ease), border-color 0.3s ease;
+}
+
+@keyframes fadeUp {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.wc-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--wc-indigo);
+}
+
+/* Icon Box */
+.wc-icon-box {
+  background: linear-gradient(135deg, var(--wc-indigo), var(--wc-purple));
+  color: white;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  /* margin-bottom: 32px; */
+  box-shadow: 0 10px 20px -5px rgba(99, 102, 241, 0.3);
+  flex-shrink: 0;
+}
+
+.wc-card-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin-bottom: 14px;
+  color: var(--wc-navy);
+  letter-spacing: -0.02em;
+}
+
+.wc-card-desc {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--wc-slate);
+  margin: 0;
+}
+
+/* --- Mobile Spacing Fixes --- */
+@media (max-width: 640px) {
+  .wc-wrapper {
+    padding: 60px 20px;
+  }
+
+  .wc-grid {
+    gap: 40px; /* Increased vertical space between stacked cards */
+  }
+
+  .wc-card {
+    padding: 32px 24px;
+    height: auto;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06); /* More visible on mobile */
+  }
+
+  .wc-title {
+    font-size: 2rem;
+  }
+
+  .wc-icon-box {
+    /* margin-bottom: 24px; */
+  }
+}

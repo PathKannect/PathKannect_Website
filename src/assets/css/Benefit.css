@@ -1,0 +1,251 @@
+
+:root {
+  --sky-primary: #6366f1;
+  --sky-bg: #f0f9ff;
+  --mint-primary: #10b981;
+  --mint-bg: #f0fdf4;
+  --text-dark: #0f172a;
+  --text-gray: #64748b;
+  --h-font: 'Plus Jakarta Sans', sans-serif;
+}
+
+.light-benefit-section {
+  padding: 100px 20px;
+  background-color: #ffffff;
+  font-family: var(--h-font);
+  overflow: hidden;
+}
+
+
+.light-benefit-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header Styling */
+.light-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.light-badge {
+  display: inline-block;
+  background: #f1f5f9;
+  color: var(--text-gray);
+  padding: 8px 20px;
+  border-radius: 100px;
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 20px;
+}
+
+.light-header h2 {
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  color: var(--text-dark);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+}
+
+.light-header h2 span {
+  color: var(--sky-primary);
+}
+
+.light-header p {
+  color: var(--text-gray);
+  font-size: 1.125rem;
+  max-width: 500px;
+  margin: 15px auto 0;
+}
+
+/* Card Grid - FIXED RESPONSIVENESS */
+.light-card-grid {
+  display: grid;
+  /* Use min 0 to prevent overflow on mobile */
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 450px), 1fr));
+  gap: 32px;
+}
+
+/* Card Base */
+.light-card {
+  padding: 48px;
+  border-radius: 32px;
+  border: 1px solid #f1f5f9;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  background: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.light-card:hover {
+  transform: translateY(-8px);
+}
+
+/* Themes */
+.sky-theme { background: linear-gradient(180deg, #ffffff 0%, var(--sky-bg) 100%); }
+.sky-theme:hover { border-color: var(--sky-primary); box-shadow: 0 30px 60px -12px rgba(14, 165, 233, 0.15); }
+.sky-theme .light-icon-wrapper { background: var(--sky-primary); color: white; }
+.sky-theme .light-point-icon { color: var(--sky-primary); background: #e0f2fe; }
+
+.mint-theme { background: linear-gradient(180deg, #ffffff 0%, var(--mint-bg) 100%); }
+.mint-theme:hover { border-color: var(--mint-primary); box-shadow: 0 30px 60px -12px rgba(16, 185, 129, 0.15); }
+.mint-theme .light-icon-wrapper { background: var(--mint-primary); color: white; }
+.mint-theme .light-point-icon { color: var(--mint-primary); background: #dcfce7; }
+
+/* Card Top Section */
+.light-card-top {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 28px;
+}
+
+/* Paragraphs unbold */
+.light-benefit-section p {
+  font-weight: 400;
+}
+
+/* Point text styling */
+.light-point-text {
+  font-size: 0.95rem;
+}
+
+.light-point-title {
+  font-weight: 500;
+}
+
+.light-point-subtext {
+  font-weight: 400;
+  color: #555;
+}
+
+
+.light-icon-wrapper {
+  width: 64px;
+  height: 64px;
+  flex-shrink: 0; /* CRITICAL: Prevents icon squishing */
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.06);
+}
+.section-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  text-align: center;
+  color: #1f2937; /* dark gray */
+  margin-bottom: 2rem;
+  letter-spacing: -0.5px;
+}
+
+.section-title .highlight {
+  color: #2563eb; /* blue accent */
+  position: relative;
+}
+
+.section-title .highlight::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, #2563eb, #60a5fa);
+  border-radius: 2px;
+}
+
+
+.light-icon-wrapper svg {
+  width: 32px;
+  height: 32px;
+}
+
+.light-card h3 {
+  font-size: 1.75rem;
+  color: var(--text-dark);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.light-desc {
+  color: var(--text-gray);
+  line-height: 1.6;
+  font-size: 1.05rem;
+  margin-bottom: 32px;
+}
+
+/* Points Layout */
+.light-points {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 48px;
+}
+
+.light-point-item {
+  display: flex;
+  align-items: flex-start; /* Better for multi-line text */
+  gap: 16px;
+}
+
+.light-point-icon {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0; /* Prevents squishing */
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.light-point-text {
+  font-size: 1rem;
+  color: var(--text-dark);
+  font-weight: 600;
+  padding-top: 4px; /* Align with icon center */
+}
+
+/* CTA Button */
+.light-cta {
+  width: 100%;
+  padding: 18px;
+  border-radius: 16px;
+  border: 1px solid #e2e8f0;
+  background: white;
+  color: var(--text-dark);
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: auto; /* Pushes button to bottom of card */
+}
+
+.light-cta:hover {
+  background: var(--text-dark);
+  color: white;
+  border-color: var(--text-dark);
+  transform: scale(1.02);
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 768px) {
+  .light-benefit-section { padding: 60px 20px; }
+  .light-card { padding: 32px; }
+  .light-header { margin-bottom: 40px; }
+  .light-card h3 { font-size: 1.5rem; }
+}
+
+@media (max-width: 480px) {
+  .light-card-top { flex-direction: column; align-items: flex-start; }
+  .light-card { padding: 24px; border-radius: 24px; }
+  .light-header h2 { font-size: 2rem; }
+  .light-point-text { font-size: 0.9rem; }
+}
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 1.8rem;
+  }
+}

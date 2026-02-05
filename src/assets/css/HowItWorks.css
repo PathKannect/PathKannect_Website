@@ -1,0 +1,139 @@
+:root {
+  --hiw-purple: #6366f1;
+  --hiw-bg: linear-gradient(180deg, #f8faff 0%, #f3e8ff 100%);
+  --hiw-text: #1e293b;
+  --hiw-muted: #64748b;
+}
+
+.hiw-section {
+  padding: 100px 20px;
+  background: var(--hiw-bg);
+  font-family: 'Inter', sans-serif;
+  overflow: hidden;
+}
+
+.hiw-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hiw-header {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.hiw-header h2 {
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--hiw-text);
+  margin-bottom: 15px;
+}
+
+.hiw-header p {
+  color: var(--hiw-muted);
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Steps Wrapper */
+.hiw-steps-wrapper {
+  position: relative;
+}
+
+/* Horizontal Line connecting the steps */
+.hiw-line {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  right: 10%;
+  height: 2px;
+  background: rgba(99, 102, 241, 0.2);
+  z-index: 0;
+}
+
+.hiw-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Card Styling */
+.hiw-card {
+  background: #ffffff;
+  padding: 40px 30px;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+  text-align: left;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.hiw-card:hover {
+  transform: translateY(-10px);
+}
+
+.hiw-number {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: var(--hiw-purple);
+  line-height: 1;
+  margin-bottom: 20px;
+  opacity: 0.9;
+}
+
+.hiw-divider {
+  width: 40px;
+  height: 3px;
+  background: var(--hiw-purple);
+  margin-bottom: 25px;
+  border-radius: 2px;
+}
+
+.hiw-card h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--hiw-text);
+  margin-bottom: 15px;
+}
+
+.hiw-card p {
+  color: var(--hiw-muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* RESPONSIVE STYLES */
+
+/* Tablet View */
+@media (max-width: 1024px) {
+  .hiw-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+  .hiw-line {
+    display: none; /* Hide line when grid breaks into multiple rows */
+  }
+}
+
+/* Mobile View */
+@media (max-width: 640px) {
+  .hiw-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .hiw-header h2 {
+    font-size: 2.2rem;
+  }
+
+  .hiw-card {
+    padding: 30px 25px;
+  }
+
+  .hiw-section {
+    padding: 60px 20px;
+  }
+}

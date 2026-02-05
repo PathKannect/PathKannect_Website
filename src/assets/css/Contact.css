@@ -1,0 +1,248 @@
+:root {
+  --primary-color: #4f46e5;
+  --primary-hover: #4338ca;
+  --dark-text: #1e293b;
+  --light-text: #64748b;
+  --bg-gradient: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  --white: #ffffff;
+  --border-light: #e2e8f0;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+  --shadow-lg: 0 20px 40px rgba(0,0,0,0.1);
+  --radius-lg: 24px;
+  --radius-md: 12px;
+}
+
+/* 1. WRAPPER: Centers everything on the screen */
+.wc-contact-wrapper {
+  padding: 60px 20px;
+  background: var(--bg-gradient);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;      /* Vertical Center */
+  justify-content: center;   /* Horizontal Center */
+  font-family: "Inter", sans-serif;
+}
+
+/* 2. CONTAINER: The 50/50 Split Box */
+.wc-contact-container {
+  max-width: 1200px;
+  width: 100%;
+  display: grid;
+  /* This creates the 50% - 50% split */
+  grid-template-columns: 1fr 1fr; 
+  gap: 60px;
+  align-items: center;
+  margin: 0 auto;
+}
+
+/* LEFT SIDE - INFO */
+.wc-contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: 20vh;
+}
+
+.wc-tagline {
+  color: var(--primary-color);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.9rem;
+  text-decoration: underline;
+}
+
+.wc-title {
+  font-size: 2rem;
+  line-height: 1.1;
+  color: var(--dark-text);
+  font-weight: 500;
+  margin: 0;
+}
+.wc-link {
+  outline: none;
+  color: var(--primary-color); /* adjust to your theme */
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.wc-title > span {
+  display: block;
+  font-size: 2.5rem;   /* 👈 smaller text */
+  font-weight: 500;
+  color: #555;         /* soft, readable */
+  margin-top: 0.75rem;
+}
+
+.wc-gradient-text {
+  display: inline-block;
+  font-size: 2.5rem;   /* 👈 BIG emphasis */
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--primary-color), #7c3aed);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+
+.wc-description {
+  color: var(--light-text);
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.wc-details-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 20px;
+}
+
+.wc-detail-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.wc-icon-box {
+  width: 56px;
+  height: 56px;
+  background: var(--white);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-color);
+  box-shadow: var(--shadow-sm);
+}
+
+.wc-detail-item h4 {
+  margin: 0;
+  font-size: 1rem;
+  color: var(--dark-text);
+}
+
+.wc-detail-item p {
+  margin: 0;
+  color: var(--light-text);
+}
+
+/* RIGHT SIDE - FORM CARD */
+.wc-form-card {
+  background: var(--white);
+  padding: 40px;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-lg);
+}
+
+.wc-modern-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Rows inside the form */
+.wc-input-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.wc-input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.wc-input-group label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--dark-text);
+}
+
+.wc-required {
+  color: #ef4444;
+}
+
+.wc-input-group input,
+.wc-input-group select {
+  padding: 14px 16px;
+  border: 2px solid var(--border-light);
+  border-radius: var(--radius-md);
+  font-size: 0.95rem;
+  outline: none;
+  transition: all 0.3s;
+}
+
+.wc-input-group input:focus,
+.wc-input-group select:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.1);
+}
+
+/* Submit Button */
+.wc-submit-btn {
+  background: var(--primary-color);
+  color: white;
+  padding: 18px;
+  border: none;
+  border-radius: var(--radius-md);
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: background 0.3s;
+}
+.wc-submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+
+.wc-submit-btn:hover {
+  background: var(--primary-hover);
+}
+
+/* --- RESPONSIVENESS --- */
+
+/* For smaller desktops/tablets: Adjust gap */
+@media (max-width: 1100px) {
+  .wc-contact-container {
+    gap: 30px;
+    padding: 0 20px;
+  }
+}
+
+/* Switch to single column for Mobile/Tablets */
+@media (max-width: 992px) {
+  .wc-contact-container {
+    grid-template-columns: 1fr; /* Stack vertically */
+    text-align: center;
+  }
+
+  .wc-contact-info {
+    align-items: center;
+  }
+
+  .wc-details-list {
+    align-items: center;
+  }
+
+  .wc-form-card {
+    margin-top: 20px;
+  }
+}
+
+/* Stack form rows on small mobile */
+@media (max-width: 600px) {
+  .wc-input-row {
+    grid-template-columns: 1fr;
+  }
+  
+  .wc-form-card {
+    padding: 24px;
+  }
+}

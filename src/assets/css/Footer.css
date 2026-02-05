@@ -1,0 +1,178 @@
+/* Import Modern Font */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --f-dark: #020617;
+  --f-slate: #94a3b8;
+  --f-indigo: #6366f1;
+  --f-purple: #a855f7;
+  --f-border: rgba(168, 85, 247, 0.2);
+  --f-white: #ffffff;
+  --f-bg-soft: rgba(168, 85, 247, 0.08);
+}
+
+/* ================= FOOTER BASE ================= */
+.f-wrapper {
+  background: radial-gradient(circle at top, #1e1b4b, #020617);
+  padding: 40px 24px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  border-top: 1px solid var(--f-border);
+  color: var(--f-white);
+}
+
+.f-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* ================= MAIN ROW ================= */
+.f-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+/* ================= BRAND ================= */
+.f-brand {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+  flex: 2;
+}
+
+.f-logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.f-logo-img {
+  width: 200px;          /* 🔥 this is the key */
+  height: auto;
+  object-fit: contain;
+  display: block;
+  filter: drop-shadow(0 0 14px rgba(168, 85, 247, 0.45));
+  transform: scale(1.15); /* boosts inner logo size */
+}
+
+.f-desc {
+  color: var(--f-slate);
+  font-size: 14px;
+  line-height: 1.5;
+  max-width: 420px;
+  border-left: 1px solid var(--f-border);
+  padding-left: 20px;
+}
+
+/* ================= LINKS ================= */
+.f-links-grid {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  flex: 1;
+}
+
+.f-link-group {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.f-link-title {
+  display: none;
+}
+
+.f-link-group a {
+  text-decoration: none;
+  color: var(--f-slate);
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: color 0.25s ease;
+}
+
+.f-link-group a:hover {
+  color: var(--f-purple);
+}
+
+/* ================= SOCIALS ================= */
+.f-socials {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.f-social-link {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  background: var(--f-bg-soft);
+  color: var(--f-white);
+  border: 1px solid var(--f-border);
+  transition: all 0.3s ease;
+}
+
+.f-social-link:hover {
+  background: linear-gradient(135deg, var(--f-indigo), var(--f-purple));
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(168, 85, 247, 0.4);
+}
+
+/* ================= BOTTOM BAR ================= */
+.f-bottom {
+  border-top: 1px solid var(--f-border);
+  display: flex;
+  justify-content: center;
+}
+
+.f-copyright {
+  font-size: 13px;
+  color: var(--f-slate);
+  opacity: 0.85;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 1100px) {
+  .f-top {
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .f-brand {
+    flex-basis: 100%;
+    justify-content: center;
+  }
+
+  .f-desc {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .f-top {
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  .f-brand {
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .f-links-grid {
+    gap: 16px;
+  }
+
+  .f-link-group {
+    flex-direction: column;
+    gap: 12px;
+  }
+ .f-logo-img {
+    width: 120px;
+  }
+}

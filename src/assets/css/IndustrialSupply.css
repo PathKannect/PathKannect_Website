@@ -1,0 +1,488 @@
+/* IndustrialSupply.css */
+
+.industrial-page {
+  font-family: 'Inter', sans-serif;
+  background-color: #f4f6f8;
+  color: #333;
+  padding-bottom: 60px;
+}
+
+.ind-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 5%;
+}
+
+/* --- Header --- */
+.ind-header {
+  position: relative;
+  background: #1e293b; /* Dark Slate Blue/Grey */
+  color: white;
+  padding: 100px 5%;
+  text-align: center;
+  margin-bottom: 80px;
+  overflow: hidden;
+}
+
+.ind-header-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.ind-tag {
+  background: #ff6b35;
+  color: white;
+  padding: 6px 14px;
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.ind-title {
+  font-family: 'Manrope', sans-serif;
+  font-size: 48px;
+  font-weight: 800;
+  margin: 20px 0;
+  line-height: 1.1;
+}
+
+.ind-subtitle {
+  font-size: 18px;
+  color: #cbd5e1;
+  line-height: 1.6;
+}
+
+/* --- Section 1: Industries --- */
+.section-head {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section-head h2 {
+  font-family: 'Manrope', sans-serif;
+  font-size: 32px;
+  font-weight: 800;
+  color: #111;
+}
+
+.underline {
+  width: 60px;
+  height: 4px;
+  background: #ff6b35;
+  margin: 10px auto;
+}
+
+.industries-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+  margin-bottom: 80px;
+}
+
+.ind-card {
+  background: white;
+  padding: 35px;
+  border-radius: 12px;
+  border-top: 4px solid #ddd;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+}
+
+.ind-card:hover {
+  border-top-color: #ff6b35;
+  transform: translateY(-5px);
+}
+
+.ind-icon-box {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.ind-card-title {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #1e293b;
+}
+
+.ind-card-desc {
+  color: #64748b;
+  margin-bottom: 25px;
+  font-size: 15px;
+}
+
+.client-list {
+  background: #f8fafc;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.client-label {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  color: #94a3b8;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.client-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.client-badge {
+  font-size: 13px;
+  background: white;
+  border: 1px solid #e2e8f0;
+  padding: 4px 10px;
+  border-radius: 4px;
+  color: #334155;
+  font-weight: 500;
+}
+
+/* --- Section 2: Wood Types Banner --- */
+.wood-types-banner {
+  background: #2c3e50;
+  color: white;
+  padding: 50px;
+  border-radius: 16px;
+  margin-bottom: 80px;
+  text-align: center;
+}
+
+.wood-types-content h3 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.wood-types-content p {
+  color: #94a3b8;
+  margin-bottom: 30px;
+}
+
+.wood-type-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.wood-type-item {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px 20px;
+  border-radius: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* .check { color: #ff6b35; } */
+
+/* --- Section 3: Logistics --- */
+.logistics-section {
+  margin-bottom: 100px;
+}
+
+.logistics-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.section-badge {
+  color: #ff6b35;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+.logistics-info h2 {
+  font-size: 36px;
+  font-weight: 800;
+  margin: 10px 0 20px;
+  color: #1e293b;
+}
+
+.logistics-intro {
+  font-size: 16px;
+  color: #64748b;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.feat-item {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.feat-dot {
+  width: 10px;
+  height: 10px;
+  background: #ff6b35;
+  border-radius: 50%;
+  margin-top: 6px;
+  flex-shrink: 0;
+}
+
+.feat-item h4 {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0 0 5px;
+}
+
+.feat-item p {
+  margin: 0;
+  color: #64748b;
+  font-size: 14px;
+}
+
+/* Visual Side */
+.logistics-visual {
+  position: relative;
+  height: 400px;
+  background-color: #e2e8f0;
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.map-bg {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(#cbd5e1 2px, transparent 2px);
+  background-size: 30px 30px;
+  opacity: 0.5;
+}
+
+.truck-card {
+  background: white;
+  padding: 20px 30px;
+  border-radius: 12px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  z-index: 2;
+  position: relative;
+  border-left: 5px solid #ff6b35;
+}
+
+.truck-icon {
+  font-size: 30px;
+}
+
+.truck-text h5 { margin: 0; font-size: 16px; font-weight: 700; }
+.truck-text p { margin: 2px 0 0; font-size: 12px; color: #64748b; }
+
+/* --- Section 4: Why Choose Us --- */
+.why-ind-section {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.why-ind-section h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+  font-weight: 800;
+  color: #1e293b;
+}
+
+.why-ind-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.why-box {
+  background: #1e293b;
+  color: white;
+  padding: 30px;
+  border-radius: 8px;
+  transition: transform 0.3s;
+}
+
+.why-box:hover {
+  transform: translateY(-5px);
+  background: #0f172a;
+}
+
+.why-box h3 {
+  color: #ff6b35;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.why-box p {
+  color: #94a3b8;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* =========================
+   Mobile & Tablet Responsive
+   ========================= */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .ind-header {
+    padding: 80px 5%;
+    margin-bottom: 60px;
+  }
+
+  .ind-title {
+    font-size: 40px;
+  }
+
+  .industries-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+
+  .logistics-visual {
+    height: 320px;
+  }
+}
+
+/* Mobile Devices */
+@media (max-width: 768px) {
+
+  /* Global spacing */
+  .ind-container {
+    padding: 0 20px;
+  }
+
+  /* Header */
+  .ind-header {
+    padding: 60px 20px;
+  }
+
+  .ind-title {
+    font-size: 30px;
+    line-height: 1.2;
+  }
+
+  .ind-subtitle {
+    font-size: 16px;
+  }
+
+  /* Section Headings */
+  .section-head h2,
+  .why-ind-section h2 {
+    font-size: 26px;
+  }
+
+  /* Industry Cards */
+  .industries-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .ind-card {
+    padding: 25px;
+  }
+
+  .ind-card-title {
+    font-size: 20px;
+  }
+
+  /* Wood Types Banner */
+  .wood-types-banner {
+    padding: 30px 20px;
+    border-radius: 12px;
+  }
+
+  .wood-types-content h3 {
+    font-size: 22px;
+  }
+
+  .wood-type-grid {
+    gap: 12px;
+  }
+
+  .wood-type-item {
+    font-size: 14px;
+    padding: 8px 14px;
+  }
+
+  /* Logistics Section */
+  .logistics-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .logistics-info h2 {
+    font-size: 28px;
+  }
+
+  .logistics-intro {
+    font-size: 15px;
+  }
+
+  .logistics-visual {
+    height: 260px;
+  }
+
+  .truck-card {
+    padding: 15px 20px;
+  }
+
+  .truck-icon {
+    font-size: 26px;
+  }
+
+  /* Why Choose Us */
+  .why-ind-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .why-box {
+    padding: 25px;
+  }
+}
+
+/* Small Phones */
+@media (max-width: 480px) {
+
+  .ind-title {
+    font-size: 26px;
+  }
+
+  .ind-subtitle {
+    font-size: 15px;
+  }
+
+  .section-head h2,
+  .why-ind-section h2 {
+    font-size: 24px;
+  }
+
+  .logistics-info h2 {
+    font-size: 24px;
+  }
+
+  .feat-item {
+    gap: 10px;
+  }
+
+  .feat-item h4 {
+    font-size: 15px;
+  }
+
+  .feat-item p {
+    font-size: 13px;
+  }
+}

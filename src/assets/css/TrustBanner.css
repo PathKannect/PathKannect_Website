@@ -1,0 +1,132 @@
+/* ===== CONTAINER ===== */
+.trust-banner {
+  padding: 20px 20px;
+  text-align: center;
+  background: radial-gradient(circle at center, #ffffff 0%, #f4f1ee 100%);
+  overflow: hidden;
+}
+
+/* ===== THE RIBBON SYSTEM ===== */
+.ribbon-container {
+  position: relative;
+  display: inline-block;
+  perspective: 1000px; /* Adds 3D depth */
+  margin-bottom: 60px;
+}
+
+.modern-ribbon {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: float 4s ease-in-out infinite; /* Subtle floating movement */
+}
+
+/* MAIN BODY */
+.ribbon-content {
+  position: relative;
+  background: linear-gradient(135deg, #A6060B 0%, #A6060B 100%);
+  padding: 20px 60px;
+  border-radius: 4px;
+  z-index: 10;
+  box-shadow: 
+    0 15px 35px rgba(102, 7, 8, 0.3),
+    inset 0 1px 1px rgba(255, 255, 255, 0.3);
+  overflow: hidden; /* For the shimmer */
+}
+
+/* THE SHIMMER EFFECT (Makes it look expensive) */
+.ribbon-shimmer {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.1),
+    transparent
+  );
+  transform: skewX(-30deg);
+  animation: shimmer 6s infinite;
+}
+
+/* TEXT STYLE */
+.ribbon-text {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: #fff;
+  margin: 0;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.separator {
+  color: #fff;
+  margin: 0 15px;
+  font-weight: 300;
+}
+
+/* THE WINGS (Tails) */
+.ribbon-wing {
+  position: absolute;
+  top: 10px;
+  width: 80px;
+  height: 100%;
+  background: #A6060B; /* Darker back-side */
+  z-index: 5;
+  clip-path: polygon(0% 0%, 100% 0%, 85% 50%, 100% 100%, 0% 100%);
+}
+
+.ribbon-wing.left {
+  left: -50px;
+  transform: rotateY(-25deg);
+}
+
+.ribbon-wing.right {
+  right: -50px;
+  transform: rotateY(25deg) scaleX(-1);
+}
+
+/* ===== SUB TEXT ===== */
+.sub-text-wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.trust-sub {
+  font-family: 'Inter', sans-serif;
+  font-size: 22px;
+  line-height: 1.8;
+  color: #2b2d42;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.highlights {
+  font-weight: 600;
+  color: #660708;
+  border-bottom: 2px solid rgba(164, 22, 26, 0.2);
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotateX(2deg); }
+  50% { transform: translateY(-10px) rotateX(-2deg); }
+}
+
+@keyframes shimmer {
+  0% { left: -100%; }
+  30% { left: 150%; }
+  100% { left: 150%; }
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .ribbon-text { font-size: 15px; }
+  .ribbon-content { padding: 15px 30px; }
+  /* .ribbon-wing { width: 40px; } */
+  .trust-sub { font-size: 18px; }
+}

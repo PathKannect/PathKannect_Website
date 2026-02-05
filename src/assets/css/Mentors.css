@@ -1,0 +1,314 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap");
+
+/* Scope everything inside the page wrapper */
+.mntr-app-page-wrapper {
+  --mntr-primary: #6366f1;
+  --mntr-primary-dark: #4f46e5;
+  --mntr-secondary: #ec4899;
+  --mntr-dark: #0f172a;
+  --mntr-light-bg: #f8fafc;
+  --mntr-text-main: #334155;
+  --mntr-text-muted: #64748b;
+  --mntr-white: #ffffff;
+  --mntr-shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: var(--mntr-text-main);
+  background-color: var(--mntr-white);
+  overflow-x: hidden;
+}
+
+.mntr-app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.mntr-app-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+/* Hero Section */
+.mntr-app-hero {
+  position: relative;
+  padding: 160px 0 120px;
+  background: radial-gradient(circle at 90% 10%, #e0e7ff 0%, #ffffff 50%);
+  overflow: hidden;
+}
+
+.mntr-app-hero-bg-blur {
+  position: absolute;
+  top: -10%;
+  right: -5%;
+  width: 400px;
+  height: 400px;
+  background: var(--mntr-primary);
+  filter: blur(120px);
+  opacity: 0.1;
+  z-index: 0;
+}
+
+.mntr-app-hero-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.mntr-app-hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: var(--mntr-white);
+  border: 1px solid #e2e8f0;
+  border-radius: 100px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--mntr-primary);
+  margin-bottom: 24px;
+}
+
+.mntr-app-hero-title {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 24px;
+}
+
+.mntr-app-text-gradient {
+  background: linear-gradient(135deg, var(--mntr-primary), var(--mntr-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.mntr-app-hero-subtext {
+  font-size: 1.25rem;
+  color: var(--mntr-text-muted);
+  max-width: 600px;
+  margin: 0 auto 40px;
+}
+
+.mntr-app-hero-actions {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+}
+
+/* Buttons */
+.mntr-app-btn-primary {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--mntr-primary);
+  color: var(--mntr-white);
+  padding: 16px 32px;
+  border-radius: 12px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 10px 15px -3px rgba(99, 102, 241, 0.3);
+}
+
+.mntr-app-btn-outline {
+  padding: 16px 32px;
+  border-radius: 12px;
+  font-weight: 700;
+  background: var(--mntr-white);
+  border: 2px solid #e2e8f0;
+  cursor: pointer;
+}
+
+/* Guidance Section */
+.mntr-app-guidance {
+  padding: 120px 0;
+}
+
+.mntr-app-section-tag {
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: var(--mntr-primary);
+  display: block;
+  margin-bottom: 12px;
+}
+
+.mntr-app-guidance-image-wrapper {
+  position: relative;
+}
+
+.mntr-app-main-img {
+  width: 100%;
+  border-radius: 24px;
+}
+
+.mntr-app-experience-card {
+  position: absolute;
+  bottom: -30px;
+  right: -30px;
+  background: var(--mntr-white);
+  padding: 24px;
+  border-radius: 20px;
+  box-shadow: var(--mntr-shadow-lg);
+}
+
+.mntr-app-exp-number {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--mntr-primary);
+  display: block;
+}
+
+.mntr-app-points-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 32px;
+}
+
+.mntr-app-points-list li {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+.mntr-app-icon-box {
+  width: 48px;
+  height: 48px;
+  background: #eef2ff;
+  color: var(--mntr-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  flex-shrink: 0;
+}
+
+/* Process Section */
+.mntr-app-process {
+  background: var(--mntr-dark);
+  color: var(--mntr-white);
+  padding: 120px 0;
+}
+
+.mntr-app-process-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin-top: 60px;
+}
+
+.mntr-app-step-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 48px;
+  border-radius: 24px;
+}
+
+.mntr-app-step-number {
+  font-size: 3rem;
+  font-weight: 800;
+  opacity: 0.3;
+  display: block;
+}
+
+/* Form Section */
+.mntr-app-form-section {
+  padding: 120px 0;
+  background-color: var(--mntr-light-bg);
+}
+
+.mntr-app-form-wrapper {
+  display: grid;
+  grid-template-columns: 0.7fr 1.3fr;
+  background: var(--mntr-white);
+  border-radius: 32px;
+  overflow: hidden;
+  box-shadow: var(--mntr-shadow-lg);
+}
+
+.mntr-app-form-info {
+  background: var(--mntr-primary);
+  color: var(--mntr-white);
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.mntr-app-form-info-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 40px;
+}
+
+.mntr-app-info-stat {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 12px;
+  border-radius: 10px;
+}
+
+.mntr-app-actual-form {
+  padding: 60px;
+}
+
+.mntr-app-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.mntr-app-input-group {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.mntr-app-input-group input,
+.mntr-app-input-group select,
+.mntr-app-input-group textarea {
+  padding: 14px;
+  border-radius: 10px;
+  border: 1px solid #e2e8f0;
+}
+
+.mntr-app-submit-btn {
+  width: 100%;
+  background: var(--mntr-dark);
+  color: var(--mntr-white);
+  padding: 18px;
+  border-radius: 12px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+}
+
+.mntr-app-status-msg {
+  margin-top: 20px;
+  padding: 12px;
+  border-radius: 8px;
+}
+
+.mntr-app-status-msg.success { background: #dcfce7; color: #166534; }
+.mntr-app-status-msg.error { background: #fee2e2; color: #991b1b; }
+
+.mntr-app-spinner {
+  animation: mntr-spin 1s linear infinite;
+}
+
+@keyframes mntr-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Responsiveness */
+@media (max-width: 1024px) {
+  .mntr-app-grid-2, .mntr-app-form-wrapper { grid-template-columns: 1fr; }
+  .mntr-app-experience-card { display: none; }
+}

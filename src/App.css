@@ -1,0 +1,20 @@
+/* ===== Global Font Setup ===== */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden; /* This prevents horizontal scrolling */
+}
+/* Optional: make all text smooth */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+/* * {
+  box-sizing: border-box;
+}
+* {
+  outline: 1px solid red !important;
+} */

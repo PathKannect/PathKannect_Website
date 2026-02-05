@@ -1,0 +1,386 @@
+/* CompanyProfile.css */
+
+.company-profile-section {
+  padding-bottom: 80px;
+  background-color: #fcfcfc;
+  font-family: 'Inter', sans-serif;
+  color: #333;
+}
+
+/* --- UPDATED: Profile Header Styling --- */
+.profile-header {
+  /* CHANGE 1: Dark Background to contrast with your White Header */
+  background-color: #111; 
+  color: white;
+
+  /* CHANGE 2: Add Top Padding so content isn't hidden behind the fixed Navbar */
+  /* Adjust this value (120px) depending on your Navbar height */
+  padding: 140px 5% 80px; 
+  
+  text-align: center;
+  margin-bottom: 60px;
+  position: relative;
+}
+
+.header-content {
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.brand-tag {
+  display: inline-block;
+  background: rgba(255, 107, 53, 0.15); /* Semi-transparent orange */
+  color: #ff6b35;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 6px 16px;
+  border-radius: 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+  border: 1px solid rgba(255, 107, 53, 0.3);
+}
+
+
+.profile-main-title {
+  font-size: 42px;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 25px;
+  color: #ffffff; /* White text for dark background */
+}
+
+.highlights {
+  color: #ff6b35; /* Orange accent */
+}
+
+.title-separator {
+  width: 80px;
+  height: 4px;
+  background: #ff6b35;
+  margin: 0 auto 25px;
+  border-radius: 2px;
+}
+
+.profile-sub-desc {
+  font-size: 18px;
+  color: #cccccc; /* Light grey text */
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* --- Container --- */
+.profile-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 5%;
+}
+
+/* --- Section 1: Mission & Vision --- */
+.mv-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-bottom: 100px;
+  margin-top: -40px; /* Slight overlap effect to pull cards up */
+}
+
+.mv-card {
+  padding: 50px 40px;
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s;
+  z-index: 3; /* Ensure it sits above the background */
+}
+
+.mv-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Mission: White Card */
+.mission {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  border-top: 5px solid #333;
+}
+
+/* Vision: Dark Card */
+.vision {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  border-top: 5px solid #333;
+}
+
+.mv-icon-bg {
+  font-size: 40px;
+  margin-bottom: 20px;
+  opacity: 0.9;
+}
+
+.mv-title {
+  font-size: 26px;
+  font-weight: 800;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.mv-text {
+  font-size: 17px;
+  line-height: 1.6;
+  color: #555;
+}
+
+.vision .mv-text {
+  color: #555;
+}
+
+/* --- Section 2: Values --- */
+.values-section {
+  margin-bottom: 100px;
+}
+
+.section-header-wrapper {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section-heading {
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 10px;
+  color: #111;
+}
+
+.section-sub {
+  color: #666;
+  font-size: 16px;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+.value-card {
+  background: white;
+  padding: 35px 25px;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  text-align: left;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.value-card:hover {
+  box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+  border-color: #ff6b35;
+  transform: translateY(-5px);
+}
+
+.value-icon-box {
+  font-size: 32px;
+  margin-bottom: 20px;
+  background: #f9f9f9;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background 0.3s;
+}
+
+
+.value-card:hover .value-icon-box {
+  background: #fff0e6;
+}
+
+.value-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #111;
+}
+
+.mv-title {
+  position: relative;
+  padding-bottom: 12px;
+}
+
+.mv-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 60px;              /* underline length */
+  height: 4px;              /* underline thickness */
+  background-color: #ff6b35; /* orange color */
+  border-radius: 2px;
+}
+
+
+.value-desc {
+  font-size: 15px;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* --- Section 3: Split Layout --- */
+.split-info-section {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 80px;
+  align-items: start;
+}
+
+/* Why Choose Us List */
+.reasons-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 30px;
+}
+
+.reasons-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  margin-bottom: 18px;
+  padding: 15px;
+  background: #fff;
+  border-radius: 8px;
+  border: 1px solid #f0f0f0;
+  transition: transform 0.2s;
+}
+
+.reasons-list li:hover {
+  transform: translateX(5px);
+  border-color: #ddd;
+}
+
+.check-circle {
+  background: #ff6b35;
+  color: white;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: bold;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.reason-text {
+  font-size: 16px;
+  color: #444;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+/* Regions Tags */
+.regions-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 25px 0 40px;
+}
+
+.region-tag {
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #333;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+}
+
+.region-tag::before {
+  content: '📍';
+  margin-right: 6px;
+  font-size: 12px;
+}
+
+.region-tag:hover {
+  background: #333;
+  color: white;
+  border-color: #333;
+}
+
+/* Map Visual */
+.map-visual {
+  width: 100%;
+  height: 220px;
+  background-color: #2c3e50;
+  border-radius: 12px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  box-shadow: inset 0 0 20px rgba(0,0,0,0.3);
+}
+
+.map-dots {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(#ffffff 1px, transparent 1px);
+  background-size: 20px 20px;
+  opacity: 0.1;
+}
+
+.map-content {
+  text-align: center;
+  color: white;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.map-icon {
+  font-size: 32px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .profile-header { padding-top: 120px; padding-bottom: 60px; }
+  .profile-main-title { font-size: 32px; }
+  .mv-grid { grid-template-columns: 1fr; margin-top: 0; }
+  .split-info-section { grid-template-columns: 1fr; gap: 50px; }
+}
+
+.map-icon {
+  font-size: 40px; /* Slightly larger for Material Design icons */
+  color: #ff6b35; /* Matching your orange accent */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.truck-move {
+  animation: truckDrive 2.5s ease-in-out infinite;
+}
+
+@keyframes truckDrive {
+  0% { transform: translateX(-10px); opacity: 0.8; }
+  50% { transform: translateX(10px); opacity: 1; }
+  100% { transform: translateX(-10px); opacity: 0.8; }
+}
