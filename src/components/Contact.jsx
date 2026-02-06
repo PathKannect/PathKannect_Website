@@ -128,7 +128,7 @@ const Contact = () => {
               </div>
               <div className="wc-input-group">
                 <label>Phone Number <span className="wc-required">*</span></label>
-                <input type="tel" name="phone" placeholder="+91 xxxxxxxxxx" required value={formData.phone} onChange={handleChange} />
+                <input type="tel" name="phone" placeholder="+91 xxxxxxxxxx" required value={formData.phone} onChange={handleChange} pattern="[0-9]{10}"   maxLength="10"   title="Please enter a valid 10-digit phone number"/>
               </div>
             </div>
 
