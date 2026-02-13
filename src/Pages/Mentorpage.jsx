@@ -1,10 +1,18 @@
 import React from 'react'
-import MentorPage from '../components/Mentors'
+import MentorHeroSection from '../components/MentorHeroSection'
+import MentorAboutSection from '../components/MentorAboutSection'
+import MentorRequirements from '../components/MentorRequirements'
+import MentorRegistration from '../components/MentorRegistration'
+import WhyBecomeMentor from '../components/WhyBecomeMentor'
 
 const Mentorpage = () => {
   return (
     <div>
-        <MentorPage />
+        <MentorHeroSection />
+        {/* <MentorAboutSection /> */}
+        <WhyBecomeMentor />
+        <MentorRequirements />
+        <MentorRegistration />
     </div>
   )
 }

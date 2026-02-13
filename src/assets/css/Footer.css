@@ -156,7 +156,7 @@
 @media (max-width: 600px) {
   .f-top {
     flex-direction: column;
-    gap: 28px;
+    gap: 0px;
   }
 
   .f-brand {
@@ -171,6 +171,7 @@
   .f-link-group {
     flex-direction: column;
     gap: 12px;
+    padding: 10px;
   }
  .f-logo-img {
     width: 120px;

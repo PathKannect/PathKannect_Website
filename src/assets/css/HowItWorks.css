@@ -1,9 +1,15 @@
+/* ================= ROOT VARIABLES ================= */
+
 :root {
   --hiw-purple: #6366f1;
-  --hiw-bg: linear-gradient(180deg, #f8faff 0%, #f3e8ff 100%);
   --hiw-text: #1e293b;
   --hiw-muted: #64748b;
+
+  --hiw-bg: linear-gradient(180deg, #f8faff 0%, #f3e8ff 100%);
 }
+
+
+/* ================= SECTION ================= */
 
 .hiw-section {
   padding: 100px 20px;
@@ -16,6 +22,9 @@
   max-width: 1200px;
   margin: 0 auto;
 }
+
+
+/* ================= HEADER ================= */
 
 .hiw-header {
   text-align: center;
@@ -37,12 +46,14 @@
   line-height: 1.6;
 }
 
-/* Steps Wrapper */
+
+/* ================= STEPS WRAPPER ================= */
+
 .hiw-steps-wrapper {
   position: relative;
 }
 
-/* Horizontal Line connecting the steps */
+/* Connecting horizontal line */
 .hiw-line {
   position: absolute;
   top: 50%;
@@ -53,6 +64,9 @@
   z-index: 0;
 }
 
+
+/* ================= GRID ================= */
+
 .hiw-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -61,79 +75,130 @@
   z-index: 1;
 }
 
-/* Card Styling */
+
+/* ================= CARD ================= */
+
 .hiw-card {
-  background: #ffffff;
-  padding: 40px 30px;
-  border-radius: 20px;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease;
-  text-align: left;
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  position: relative;
+  padding: 45px 30px;
+  border-radius: 18px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+  transition: all 0.25s ease;
+  border: 1px solid rgba(255,255,255,0.6);
+  backdrop-filter: blur(6px);
 }
 
 .hiw-card:hover {
-  transform: translateY(-10px);
+  transform: translateY(-8px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.1);
 }
 
+
+/* ================= ICON ================= */
+
+.hiw-icon {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  font-size: 22px;
+  color: var(--hiw-purple);
+  opacity: 0.9;
+}
+
+
+/* ================= NUMBER ================= */
+
 .hiw-number {
-  font-size: 3.5rem;
+  font-size: 3.3rem;
   font-weight: 800;
   color: var(--hiw-purple);
   line-height: 1;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
   opacity: 0.9;
 }
+
+
+/* ================= DIVIDER ================= */
 
 .hiw-divider {
   width: 40px;
   height: 3px;
   background: var(--hiw-purple);
-  margin-bottom: 25px;
+  margin-bottom: 20px;
   border-radius: 2px;
 }
 
+
+/* ================= TITLE ================= */
+
 .hiw-card h3 {
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   font-weight: 700;
   color: var(--hiw-text);
-  margin-bottom: 15px;
+  line-height: 1.4;
 }
 
-.hiw-card p {
-  color: var(--hiw-muted);
-  font-size: 0.95rem;
-  line-height: 1.6;
+
+/* ================= GRADIENT CARD COLORS ================= */
+
+.card-blue {
+  background: linear-gradient(135deg, #e0f2fe 0%, #f8fafc 100%);
 }
 
-/* RESPONSIVE STYLES */
+.card-green {
+  background: linear-gradient(135deg, #dcfce7 0%, #f8fafc 100%);
+}
 
-/* Tablet View */
+.card-orange {
+  background: linear-gradient(135deg, #ffedd5 0%, #f8fafc 100%);
+}
+
+.card-pink {
+  background: linear-gradient(135deg, #fce7f3 0%, #f8fafc 100%);
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+/* Tablet */
 @media (max-width: 1024px) {
+
   .hiw-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
   }
+
   .hiw-line {
-    display: none; /* Hide line when grid breaks into multiple rows */
+    display: none;
+  }
+
+  .hiw-header h2 {
+    font-size: 2.5rem;
   }
 }
 
-/* Mobile View */
-@media (max-width: 640px) {
-  .hiw-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  .hiw-header h2 {
-    font-size: 2.2rem;
-  }
 
-  .hiw-card {
-    padding: 30px 25px;
-  }
+/* Mobile */
+@media (max-width: 640px) {
 
   .hiw-section {
     padding: 60px 20px;
+  }
+
+  .hiw-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .hiw-card {
+    padding: 30px 24px;
+  }
+
+  .hiw-header h2 {
+    font-size: 2rem;
+  }
+
+  .hiw-number {
+    font-size: 2.6rem;
   }
 }

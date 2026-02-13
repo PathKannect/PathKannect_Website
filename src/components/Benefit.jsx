@@ -122,12 +122,12 @@ const Benefit = () => {
                 ))}
               </div>
 
-              <button
+              {/* <button
                 className="light-cta"
                 onClick={() => navigate("/aboutus")}
               >
                 Learn More
-              </button>
+              </button> */}
             </div>
           ))}
         </div>

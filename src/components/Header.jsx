@@ -38,12 +38,12 @@ const Header = () => {
           <NavLink to="/aboutus" onClick={closeMenu} className={({ isActive }) => isActive ? "active-link" : ""}>
             About Us
           </NavLink>
-          {/* <NavLink to="/mentor" onClick={closeMenu} className={({ isActive }) => isActive ? "active-link" : ""}>
-            Mentor
-          </NavLink> */}
-          {/* <NavLink to="/contact" onClick={closeMenu} className={({ isActive }) => isActive ? "active-link" : ""}>
+          <NavLink to="/mentor" onClick={closeMenu} className={({ isActive }) => isActive ? "active-link" : ""}>
+            MentorHub
+          </NavLink>
+          <NavLink to="/contact" onClick={closeMenu} className={({ isActive }) => isActive ? "active-link" : ""}>
             Contact Us
-          </NavLink> */}
+          </NavLink>
 
           {/* Optional: Add a CTA in header as per latest trends */}
           <NavLink

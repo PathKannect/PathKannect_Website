@@ -34,7 +34,8 @@ const Footer = () => {
               <h4 className="f-link-title">Platform</h4>
               <Link to="/">Home</Link>
               <Link to="/aboutus">About Us</Link>
-              {/* <Link to="/">Contact Us</Link> */}
+              <Link to="/mentor">MentorHub</Link>
+              <Link to="/contact">Contact Us</Link>
             </div>
 
             {/* Social Icons */}

@@ -8,6 +8,7 @@ import Benefit from '../components/Benefit';
 import HowItWorks from '../components/HowItWorks';
 import WhyChoose from '../components/WhyChoose';
 import CTASection from '../components/CTASection';
+import PricingStyles from '../components/PricingStyles';
 
 const Homepage = () => {
   return (
@@ -20,7 +21,7 @@ const Homepage = () => {
       </div>
 
       <div data-aos="fade-up" data-aos-delay="150">
-        <Benefit />
+        <PricingStyles />
       </div>
       <div >
         <CTASection />

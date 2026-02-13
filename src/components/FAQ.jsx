@@ -1,36 +1,36 @@
 import React, { useState } from "react";
 import "../assets/css/FAQ.css";
-import { ChevronDown, ChevronUp, Lightbulb, Shield, CreditCard, Zap } from "lucide-react";
+import { ChevronDown, ChevronUp, Users, TrendingUp, CreditCard, Clock, Zap } from "lucide-react";
 
 const faqData = [
   {
-    icon: Lightbulb,
-    question: "How do I get started with the platform?",
-    answer: "Sign up for a free account in under 60 seconds. Our interactive onboarding tour guides you through setup, and you'll be creating your first project in minutes with zero technical hassle.",
+    icon: Users,
+    question: "Is this only for beginners?",
+    answer: "No. Our platform supports students, fresh graduates, working professionals switching roles, and experienced candidates preparing for senior interviews. Every mock session is tailored to your experience level and target role.",
     color: "var(--spark-purple)"
   },
   {
-    icon: Shield,
-    question: "Can I cancel my subscription anytime?",
-    answer: "Yes, cancel instantly from account settings. No questions asked, no penalties. You'll keep full Pro access until your billing cycle ends, then seamlessly downgrade to free.",
+    icon: TrendingUp,
+    question: "Will this actually improve my interview performance?",
+    answer: "Yes — because this is not random practice. You get industry-led simulations, structured feedback, skill gap analysis, a final readiness score, and a 21-day roadmap. We focus on measurable progress, not generic tips.",
     color: "var(--ocean-blue)"
   },
   {
     icon: CreditCard,
-    question: "What payment methods do you accept?",
-    answer: "We support all major cards (Visa, Mastercard, Amex), Apple Pay, Google Pay, and PayPal. Subscriptions auto-renew monthly or annually with enterprise options available.",
+    question: "Is this worth ₹2,999?",
+    answer: "Compare it to the cost of losing one job opportunity or months of self-preparation without direction. This is a focused 21-day transformation designed to significantly increase your offer probability.",
     color: "var(--emerald-green)"
   },
   {
-    icon: Zap,
-    question: "Do you offer custom enterprise pricing?",
-    answer: "For teams of 50+, we provide dedicated support, custom SLAs, SSO integration, and volume pricing. Contact sales@company.com for a personalized quote within 24 hours.",
+    icon: Clock,
+    question: "What if I’m busy?",
+    answer: "The program is structured for working professionals. It is highly flexible: you can choose your own session slots, opt for weekend interviews, and complete self-paced tasks between sessions.",
     color: "var(--amber-gold)"
   },
   {
-    icon: ChevronDown,
-    question: "Is there a free trial available?",
-    answer: "Every plan includes a 14-day free trial with full Pro features. No credit card required upfront. Upgrade anytime during trial or continue seamlessly on free forever plan.",
+    icon: Zap,
+    question: "How does the 21-Day Industry Interview Program work?",
+    answer: "It follows a structured roadmap: 1. Take a skill assessment. 2. Receive a personalized plan. 3. Attend 3 industry-led mock interviews. 4. Get detailed scorecards. 5. Complete a final readiness evaluation.",
     color: "var(--rose-pink)"
   }
 ];
@@ -44,13 +44,13 @@ const FAQHub = () => {
         <div className="vaultBeacon introGlow">
           <div className="beaconRibbon pulseShine">
             <span className="shineRipple"></span>
-            Frequently Asked Questions
+            Common Doubts
           </div>
           <h2 className="vaultTitan megaGlow">
             Got <span className="spectrumBurst">Questions?</span>
           </h2>
           <p className="vaultEcho leadHarmony">
-            Everything you need to know to get started and make the most of our platform
+            Everything you need to know about the 21-Day Industry Interview Program
           </p>
         </div>
 
@@ -95,15 +95,15 @@ const FAQHub = () => {
           })}
         </div>
 
-        <div className="rescueBeacon finalNudge">
+        {/* <div className="rescueBeacon finalNudge">
           <div className="nudgeSphere textCluster">
-            <h3 className="anchorBold">Still have questions?</h3>
-            <p className="anchorSoft">Our support team is here 24/7</p>
+            <h3 className="anchorBold">Ready to transform your career?</h3>
+            <p className="anchorSoft">Join the 21-day roadmap today.</p>
           </div>
-          <a href="#contact" className="lifelineSpark igniteGradient">
-            Contact Support →
+          <a href="#pricing" className="lifelineSpark igniteGradient">
+            Get Started Now →
           </a>
-        </div>
+        </div> */}
       </div>
 
       <div className="cosmicDrift nebulaField">

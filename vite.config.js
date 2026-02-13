@@ -6,7 +6,7 @@ export default defineConfig({
   server: {
     // Add your ngrok hostname here
     allowedHosts: ['uncast-johnette-comely.ngrok-free.dev'],
-    port: 5173,      // or whatever port you are using
+    port: 5174,      // or whatever port you are using
     strictPort: true,
   },
 });

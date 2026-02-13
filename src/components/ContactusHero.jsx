@@ -1,6 +1,6 @@
 import React from "react";
 import "../assets/css/ContactHero.css";
-import { MessageCircle, Mail, Phone, MapPin } from "lucide-react";
+import { MessageCircle, Mail, Phone, Clock, CheckCircle } from "lucide-react";
 
 const ContactHero = () => {
   const contactCards = [
@@ -9,7 +9,7 @@ const ContactHero = () => {
       title: "Live Chat",
       desc: "Instant support from our team. Available 24/7.",
       linkText: "Start chat",
-      href: "#chat",
+      href: "#",
       bgColor: "var(--chat-bg)",
       accentColor: "var(--chat-accent)"
     },
@@ -17,8 +17,8 @@ const ContactHero = () => {
       icon: <Mail size={28} />,
       title: "Email Us",
       desc: "Detailed inquiries? Send us an email anytime.",
-      linkText: "hello@company.com",
-      href: "mailto:hello@company.com",
+      linkText: "pathkannect@gmail.com",
+      href: "mailto:pathkannect@gmail.com",
       bgColor: "var(--email-bg)",
       accentColor: "var(--email-accent)"
     },
@@ -26,8 +26,8 @@ const ContactHero = () => {
       icon: <Phone size={28} />,
       title: "Call Us",
       desc: "Quick phone support during business hours.",
-      linkText: "+1 (555) 123-4567",
-      href: "tel:+15551234567",
+      linkText: "+91 6304488441",
+      href: "tel:+916304488441",
       bgColor: "var(--phone-bg)",
       accentColor: "var(--phone-accent)"
     }
@@ -42,16 +42,31 @@ const ContactHero = () => {
             Contact Us
           </span>
           <h1 className="cu-hero-title">
-            Ready to get <span className="cu-hero-gradient-text">started?</span>
+            Ready to crack your next <span className="cu-hero-gradient-text">interview?</span>
           </h1>
           <p className="cu-hero-description">
             We're here to help you every step of the way. Choose your preferred 
             contact method below and let's connect.
           </p>
-          <div className="cu-hero-cta">
-            <button className="cta-button primary">
-              Get Started Today
-            </button>
+
+          {/* NEW FRAME INSTEAD OF BUTTON */}
+          <div className="cu-status-frame">
+            <div className="status-item">
+              <div className="status-indicator">
+                <span className="dot pulse"></span>
+                <span className="status-text">Support Online</span>
+              </div>
+            </div>
+            <div className="status-divider"></div>
+            <div className="status-item">
+              <Clock size={16} className="status-icon" />
+              <span>Proper Guidence</span>
+            </div>
+            <div className="status-divider"></div>
+            <div className="status-item">
+              <CheckCircle size={16} className="status-icon" />
+              <span>Verified Experts</span>
+            </div>
           </div>
         </div>
 
@@ -82,7 +97,6 @@ const ContactHero = () => {
         </div>
       </div>
       
-      {/* Floating background elements */}
       <div className="floating-elements">
         <div className="float-el float-1"></div>
         <div className="float-el float-2"></div>
