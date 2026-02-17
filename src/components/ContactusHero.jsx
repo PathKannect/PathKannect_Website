@@ -9,7 +9,7 @@ const ContactHero = () => {
       title: "Live Chat",
       desc: "Instant support from our team. Available 24/7.",
       linkText: "Start chat",
-      href: "https://chat.whatsapp.com/I4cJqcPn7746wD1uHIQCFg",
+      href: "https://wa.me/916304488441",
       bgColor: "var(--chat-bg)",
       accentColor: "var(--chat-accent)"
     },
